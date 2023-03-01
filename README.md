@@ -1,4 +1,5 @@
-https://github.com/greysn/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+# yamdb_final ![YaMDb Status](https://github.com/greysn/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+
 
 Проект даёт возможность управлять данными методом API запросов.
 
