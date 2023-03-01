@@ -1,4 +1,4 @@
-https://github.com/greysn/yamdb_final/actions/workflows/<WORKFLOW_FILE>/badge.svg
+https://github.com/greysn/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
 
 Проект даёт возможность управлять данными методом API запросов.
 
