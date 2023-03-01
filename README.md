@@ -1,3 +1,5 @@
+https://github.com/greysn/yamdb_final/actions/workflows/<WORKFLOW_FILE>/badge.svg
+
 Проект даёт возможность управлять данными методом API запросов.
 
 Проект YaMDb собирает отзывы пользователей на произведения.
