@@ -1,4 +1,5 @@
-name: CI
+name: yamdb_workflow
+
 
 on: [push]
 
@@ -58,7 +59,7 @@ jobs:
         with:
           push: true
           context: ./api_yamdb/
-          tags: greysn/yamdb_final:latest
+          tags: greysn/api_yamdb:latest
 
   deploy:
     if: github.ref_name == 'master'

@@ -1,4 +1,4 @@
-![workflow](https://github.com/greysn/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+![yamdb_workflow](https://github.com/greysn/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
 
 Проект даёт возможность управлять данными методом API запросов.
 
