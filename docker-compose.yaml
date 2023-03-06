@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    build: greysn/api_yamdb:latest
+    image: greysn/api_yamdb:v2
     restart: always
     volumes:
       - static_value:/app/static/
