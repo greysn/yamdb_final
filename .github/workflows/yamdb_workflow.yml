@@ -59,7 +59,7 @@ jobs:
         with:
           push: true
           context: api_yamdb
-          tags: greysn/api_yamdb:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
 
   deploy:
     if: github.ref_name == 'master'
