@@ -1,11 +1,11 @@
-from django.utils import timezone
 from django.conf import settings
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.utils import timezone
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework.generics import get_object_or_404
 from rest_framework.validators import UniqueValidator
-from reviews.models import Category, Comment, Genre, Title, Review, User
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 from .validators import MixinValidatorUsername
 
