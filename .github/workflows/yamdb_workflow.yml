@@ -18,43 +18,34 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # обновление pip
           python -m pip install --upgrade pip 
-          # установка flake8 и его плагинов
           pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
-          # установка зависимостей
           pip install -r api_yamdb/requirements.txt 
       - name: Test with flake8
         run: |
-          # запуск проверки проекта по flake8
           python -m flake8
       - name: to folder api_yamdb/
         run: |
-          # перейти в папку, содержащую manage.py 
           cd api_yamdb/
       - name: django tests
         run: |
-          # запустить написанные разработчиком тесты
           pytest
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     needs: tests
     steps:
       - name: Check out the repo
-        # Проверка доступности репозитория DockerHub для workflow
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
-        # Вызов сборщика контейнеров Docker
         uses: docker/setup-buildx-action@v1
       - name: Login to Docker
-        # Запуск скрипта авторизации на DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Hub
-        # Пуш образа в DockerHub
         uses: docker/build-push-action@v2
         with:
           push: true
